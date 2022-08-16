@@ -1,0 +1,31 @@
+package com.mycompany.sri;
+
+import java.util.Scanner;
+
+
+public class Sri
+{
+
+    public static void main(String[] args)
+    {
+        int n,rem,sum=0;
+        System.out.println("enter value:");
+        Scanner o=new Scanner(System.in);
+        int num=o.nextInt();
+        n=num;
+        while(num>0)
+        {
+        rem=num%10;
+        sum=(sum*10)+rem;
+        num/=10;
+        }
+        if(n==sum)
+        {
+          System.out.println("palindrome");
+        } 
+        else
+        {
+            System.out.println("not palindrome");
+        }
+    }
+}

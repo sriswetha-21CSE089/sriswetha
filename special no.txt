@@ -1,0 +1,33 @@
+package com.mycompany.specialno;
+
+import java.util.Scanner;
+
+
+public class Specialno 
+{
+
+    public static void main(String[] args) 
+    {
+        int n,rem,sum=0,multi=1,result;
+        System.out.println("enter value:");
+        Scanner o=new Scanner(System.in);
+        int num=o.nextInt();
+        n=num;
+        while(num>0)
+        {
+            rem=num%10;
+            sum+=rem;
+            multi*=rem;
+            num/=10;
+        }
+        result=sum+multi;
+        if(n==result)
+        {
+          System.out.println("special number");  
+        }
+        else
+        {
+            System.out.println("not special number");
+        }
+    }
+}
